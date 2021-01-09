@@ -16,6 +16,13 @@
   transform: scale(1.02);
 }
 
+.title {
+  /* max-height: 30px; */
+  overflow: hidden;
+  text-overflow: ellipsis;
+  word-wrap: break-word;
+}
+
 .title,
 .channel {
   font-size: 0.8rem;

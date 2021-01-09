@@ -7,7 +7,7 @@ class Youtube {
     };
   }
 
-  mostPopular() {
+  async mostPopular() {
     return (
       fetch(
         `https://www.googleapis.com/youtube/v3/videos?part=snippet%2CcontentDetails%2Cstatistics&chart=mostPopular&maxResults=25&regionCode=KR&key=${this.key}`,

@@ -1,8 +1,8 @@
-import React, { useRef } from 'react';
+import React, { memo, useRef } from 'react';
 import styles from "./header.module.css"
 
 
-const Header = ({ onSearch }) => {
+const Header = memo(({ onSearch, onHomeClick }) => {
 
     const inputRef = useRef()
 
@@ -19,13 +19,13 @@ const Header = ({ onSearch }) => {
 
     return (
         <header className={styles.header}>
-            <div className={styles.logo}>
+            <div className={styles.logo} onClick={onHomeClick}>
                 <h2 className={styles.title}>Youtube</h2>
             </div>
             <input onKeyPress={onKeyPress} className={styles.input} ref={inputRef} type="text" placeholder="Search.."></input>
         </header>
     )
 
-};
+})
 
 export default Header;

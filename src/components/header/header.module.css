@@ -10,6 +10,13 @@
   display: flex;
   align-items: center;
   margin-right: 1em;
+  cursor: pointer;
+  transition: 0.15s ease-in;
+}
+
+.logo:hover {
+  transform: scale(1.1);
+  color: red;
 }
 
 .input {
