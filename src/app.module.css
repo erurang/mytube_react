@@ -9,3 +9,9 @@
 .detail {
   margin-top: 25px;
 }
+
+@media screen and (max-width: 1050px) {
+  .content {
+    flex-direction: column;
+  }
+}

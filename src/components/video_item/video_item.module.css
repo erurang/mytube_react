@@ -40,3 +40,19 @@
 .channel {
   font-size: 0.6rem;
 }
+
+@media screen and (min-width: 1050px) and (max-width: 1300px) {
+  .container {
+    margin-bottom: 20px;
+    padding: 10px;
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 1050px) {
+  .container {
+    margin-bottom: 20px;
+    padding: 10px;
+    width: 100%;
+  }
+}
