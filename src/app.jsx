@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react"
+import React, { useEffect, useState, useCallback } from "react"
 import Header from "./components/header/header";
 import VideoList from "./components/video_list/video_list";
 import styles from "./app.module.css"
@@ -10,19 +10,28 @@ function App({ youtube }) {
   const [videos, setVideos] = useState([]);
   const [selectedVideo, setSelectedVideo] = useState(null)
 
-  const home = () => {
+  // app이 전체를 리렌더링 할때 app의 오브젝트가 바껴서 header에서 memo를 써도
+  // app의 object의 ref props주소가 변경이 되어서
+  // memo를 쓴 의미가 사라짐. 그래서 useCallbakc을씀
+  const home = useCallback(() => {
+    console.log("home");
     setSelectedVideo(null)
-    setVideos(videos)
-  }
+    setVideos([])
+    youtube//
+      .mostPopular() //
+      .then(videos => setVideos(videos))
+  }, [youtube])
 
-  const selectVideo = (video) => {
-    setSelectedVideo(video)
-  }
-
-  const search = query => {
+  const search = useCallback(query => {
+    console.log("search");
     youtube//
       .search(query)//
       .then(videos => setVideos(videos))
+  }, [youtube])
+
+  const selectVideo = (video) => {
+    console.log("select");
+    setSelectedVideo(video)
   }
 
 
@@ -32,8 +41,9 @@ function App({ youtube }) {
     youtube//
       .mostPopular() //
       .then(videos => setVideos(videos))
-  }, [])
+  }, [youtube])
 
+  console.log("app");
   return (
     <div className={styles.app}>
       <Header onSearch={search} onHomeClick={home} />

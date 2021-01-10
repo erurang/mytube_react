@@ -1,6 +1,7 @@
-import React from 'react';
+import React, { memo } from 'react';
 
 const VideoDetail = ({ video }) => {
+    console.log("detail");
     return (
         <>
             <iframe id="ytplayer" type="text/html" width="720" height="405"
@@ -11,6 +12,6 @@ const VideoDetail = ({ video }) => {
             <span>{video.snippet.description}</span>
         </>
     )
-};
+}
 
 export default VideoDetail;
