@@ -1,3 +1,7 @@
+## github page에서 프로젝트를 보실수 있습니다.
+
+[Youtube-react](https://erurang.github.io/youtube-react)
+
 ## React로 만드는 mytube입니다.
 
 기존에 만들었던 mytube는 백엔드(nodejs,mongodb)와 프론트(pug)로 만들었다면
