@@ -1,6 +1,6 @@
-## github page에서 프로젝트를 보실수 있습니다.
+## github page에 프로젝트를 배포하였습니다.
 
-[Youtube-react](https://erurang.github.io/youtube-react)
+[유튜브 리액트 프로젝트](https://erurang.github.io/youtube-react)로 연결됩니다.
 
 ## React로 만드는 mytube입니다.
 
@@ -23,3 +23,7 @@ React Hook과 PostCSS 를 이용하였습니다.
 <img width="1288" alt="스크린샷 2021-01-09 오후 9 20 13" src="https://user-images.githubusercontent.com/56789064/104091389-78ded500-52c0-11eb-9a16-8bf448ec8522.png">
 
 비디오를 클릭시에 왼쪽은 유튜브의 ifram API를 이용해 유튜브 영상과 제목 내용이 왼쪽에 나오고 오른쪽은 연관검색이 되어있는 리스트들로 이루어져있습니다.
+
+## 반응형 웹으로 구현되어 있습니다.
+
+![반응형](https://user-images.githubusercontent.com/56789064/104117186-ab410e80-5362-11eb-8995-7a4e9202603a.gif)
